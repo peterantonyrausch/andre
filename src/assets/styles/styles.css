@@ -1,0 +1,32 @@
+:root {
+  --ailos-blue: #165C7D;
+  --ailos-orange: #FFA300;
+
+  --ailos-light-blue: #009ED0;
+  --ailos-green: #00C246;
+  --ailos-middle-blue: #007D8A;
+
+  --ailos-black: #040F14;
+  --ailos-gray1: #E7EEF1;
+  --ailos-gray2: #C6CED1;
+  --ailos-gray3: #A7B0B5;
+  --ailos-gray4: #889499;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body, app-root {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a, button {
+  cursor: pointer;
+  text-decoration: none;
+}
