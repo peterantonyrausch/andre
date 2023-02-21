@@ -4,3 +4,7 @@
   display: grid;
   grid-template-columns: 100px calc(100vw - 100px);
 }
+
+.content {
+  background: #E7EEF1;
+}
