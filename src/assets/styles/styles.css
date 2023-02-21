@@ -27,6 +27,8 @@ body, app-root {
 }
 
 a, button {
+  border: none;
   cursor: pointer;
   text-decoration: none;
+  background: transparent;
 }
