@@ -11,6 +11,8 @@
   --ailos-gray2: #C6CED1;
   --ailos-gray3: #A7B0B5;
   --ailos-gray4: #889499;
+
+  --ailos-breadcrumb: #787878;
 }
 
 * {
@@ -32,4 +34,17 @@ a, button {
   cursor: pointer;
   text-decoration: none;
   background: transparent;
+}
+
+.content-wrapper {
+  overflow-y: auto;
+  padding: 30px 25px 0;
+}
+
+.gray-4 {
+  color: var(--ailos-gray4);
+}
+
+.ailos-green {
+  color: var(--ailos-green);
 }

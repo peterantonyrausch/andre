@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   pageTitle = '';
   subscription = new Subscription();
 
+  // TODO: do dynamic breadcrumb
   constructor(private utilsService: UtilsService) {}
 
   ngOnInit() {

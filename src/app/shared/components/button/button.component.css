@@ -1,0 +1,33 @@
+button {
+  line-height: 1;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.primary {
+  color: white;
+  background: var(--ailos-blue);
+}
+
+.secondary {
+  background: white;
+  color: var(--ailos-blue);
+  border: 1px solid var(--ailos-blue);
+}
+
+.small {
+  height: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.medium {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 16px;
+}

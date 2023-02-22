@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { MenuComponent } from './layout/menu/menu.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { AilosLayoutComponent } from './layout/ailos-layout/ailos-layout.component';
 
 @NgModule({
@@ -11,13 +12,9 @@ import { AilosLayoutComponent } from './layout/ailos-layout/ailos-layout.compone
     AilosLayoutComponent,
     HeaderComponent,
     MenuComponent,
+    FooterComponent,
   ],
-  exports: [
-    AilosLayoutComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-  ]
+  exports: [AilosLayoutComponent, FooterComponent],
+  imports: [CommonModule, RouterModule],
 })
-export class CoreModule { }
+export class CoreModule {}

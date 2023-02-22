@@ -1,1 +1,9 @@
-<p>input works!</p>
+<ng-container *ngIf="parentFormGroup" [formGroup]="parentFormGroup">
+  <input
+    [type]="type"
+    [mask]="mask"
+    [class]="className"
+    [placeholder]="placeholder"
+    [formControlName]="controlName"
+  />
+</ng-container>

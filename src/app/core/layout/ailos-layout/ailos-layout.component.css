@@ -8,3 +8,13 @@
 .content {
   background: #E7EEF1;
 }
+
+.router-wrapper {
+  height: calc(100% - 89px);
+}
+
+:host /deep/ .router-wrapper > *:not(router-outlet) {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

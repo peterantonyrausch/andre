@@ -1,0 +1,33 @@
+{
+  "cooperated": [
+    {
+      "document": "123.092.349-74",
+      "name": "André Luiz Gärtner",
+      "status": "REGULAR",
+      "accounts": [
+        {
+          "accountType": "CURRENT",
+          "cooperativeName": "Cooperativa Viacredi",
+          "accountNumber": "334985-6"
+        }
+      ]
+    },
+    {
+      "document": "111.222.333-44",
+      "name": "Mariene de Sousa Oliveira",
+      "status": "REGULAR",
+      "accounts": [
+        {
+          "accountType": "APPLICATION",
+          "cooperativeName": "Cooperativa Viacredi",
+          "accountNumber": "557932-4"
+        },
+        {
+          "accountType": "CURRENT",
+          "cooperativeName": "Cooperativa Viacredi",
+          "accountNumber": "778461-8"
+        }
+      ]
+    }
+  ]
+}

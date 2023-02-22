@@ -1,0 +1,15 @@
+<div class="ailos-stepper-wrapper" *ngIf="list && list.length > 0">
+  <div class="ailos-step" *ngFor="let item of list; index as i">
+    <div class="step-info">
+      <button
+        class="step-button"
+        [ngClass]="{
+          last: i === list.length - 1,
+          selected: item.selected
+        }"
+      ></button>
+      <p>{{ item.name }}</p>
+    </div>
+    <span class="step-separator" *ngIf="i !== list.length - 1"></span>
+  </div>
+</div>

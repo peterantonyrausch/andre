@@ -1,0 +1,63 @@
+<div class="content-wrapper create-cooperative-wrapper">
+  <app-ailos-stepper [list]="stepperList"></app-ailos-stepper>
+  <div class="form-description">
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <p>
+      Se necessário, você poderá duplicar uma conta existente ou pausar e
+      retomar este cadastro futuramente. Digite apenas os números (sem pontos ou
+      traços).
+    </p>
+  </div>
+  <form
+    *ngIf="formGroup"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="formGroup"
+    class="create-cooperative"
+  >
+    <app-ailos-form-group label="CPF">
+      <app-input
+        type="text"
+        controlName="cpf"
+        mask="000.000.000-00"
+        placeholder="000.000.000-00"
+        className="create-cooperative-cpf"
+      ></app-input>
+    </app-ailos-form-group>
+    <app-button
+      type="button"
+      (click)="searchCPF()"
+      class="primary small"
+      [disabled]="formGroup.invalid"
+      >Consultar por CPF</app-button
+    >
+  </form>
+  <div class="cooperative-information">
+    <app-ailos-card
+      title="Situação cadastral do CPF"
+      subTitle="Consulta na Receita Federal"
+    >
+      <app-ailos-card-item
+        class="card-content-item"
+        label="Nome"
+        description="Mariene de Sousa Oliveira"
+      >
+        <span icon class="material-icons gray-4">person</span>
+      </app-ailos-card-item>
+      <app-ailos-card-item
+        class="card-content-item"
+        label="Situação do CPF"
+        description="Regular"
+      >
+        <span icon class="material-symbols-outlined ailos-green">
+          check_circle
+        </span>
+      </app-ailos-card-item>
+    </app-ailos-card>
+  </div>
+</div>
+
+<app-footer>
+  <app-button type="button" class="secondary medium"
+    >Dicas para abertura de conta</app-button
+  >
+</app-footer>

@@ -18,9 +18,10 @@ export class MenuComponent implements OnInit {
   }
 
   loadNavigationList() {
+    // TODO: fix icons to be outlined and find some icon for the 4 item
     return [
       { icon: 'search', routerLink: '' },
-      { icon: 'star', routerLink: '' },
+      { icon: 'grade', routerLink: '' },
       { icon: 'sms', routerLink: '' },
       { icon: 'sms', routerLink: '' },
       { icon: 'account_balance', routerLink: '' },
