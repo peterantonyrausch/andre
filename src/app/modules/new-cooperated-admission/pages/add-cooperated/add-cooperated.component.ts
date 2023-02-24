@@ -8,11 +8,11 @@ import { CooperatedService } from '../../../../core/services/cooperated.service'
 import { IAilosStepperItem } from '../../../../shared/components/ailos-stepper/ailos-stepper.component';
 
 @Component({
-  selector: 'app-create-cooperative',
-  templateUrl: './create-cooperative.component.html',
-  styleUrls: ['./create-cooperative.component.css'],
+  selector: 'app-add-cooperated',
+  templateUrl: './add-cooperated.component.html',
+  styleUrls: ['./add-cooperated.component.css'],
 })
-export class CreateCooperativeComponent implements OnInit {
+export class AddCooperatedComponent implements OnInit {
   error = false;
   loading = false;
   formGroup?: FormGroup;

@@ -7,8 +7,8 @@ const routes: Routes = [
     path: 'new-cooperative-admission',
     loadChildren: () =>
       import(
-        './modules/new-cooperative-admission/new-cooperative-admission.module'
-      ).then((m) => m.NewCooperativeAdmissionModule),
+        './modules/new-cooperated-admission/new-cooperated-admission.module'
+      ).then((m) => m.NewCooperatedAdmissionModule),
   },
 ];
 
