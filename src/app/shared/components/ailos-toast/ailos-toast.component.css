@@ -1,0 +1,18 @@
+:host {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  z-index: 2;
+}
+
+.ailos-toast-wrapper {
+  width: 500px;
+  height: 77px;
+  background: white;
+}
+
+.ailos-toast-wrapper p {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--ailos-black);
+}

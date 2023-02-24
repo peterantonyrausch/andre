@@ -1,9 +1,15 @@
 <ng-content select="[icon]"></ng-content>
-<div class="item-info">
+<div
+  class="item-info"
+  [ngClass]="{
+    action: type === 'ACTION'
+  }"
+>
   <label>
     {{ label }}
   </label>
   <p>
     {{ description }}
   </p>
+  <ng-content select="[action]"></ng-content>
 </div>

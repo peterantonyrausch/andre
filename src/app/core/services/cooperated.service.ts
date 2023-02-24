@@ -13,7 +13,7 @@ export class CooperatedService {
 
   getByDocument(document: string) {
     return this.httpClient.get<Cooperated>(
-      `${this.API_URL}/cooperated?document=${document}`,
+      `${this.API_URL}/cooperated/${document}`,
     );
   }
 }

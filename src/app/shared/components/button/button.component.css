@@ -20,6 +20,12 @@ button:disabled {
   border: 1px solid var(--ailos-blue);
 }
 
+.tertiary {
+  border: none;
+  background: transparent;
+  color: var(--ailos-blue);
+}
+
 .small {
   height: 32px;
   padding: 0 16px;

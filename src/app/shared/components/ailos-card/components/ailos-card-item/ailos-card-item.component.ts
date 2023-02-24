@@ -10,4 +10,6 @@ export class AilosCardItemComponent {
   label = '';
   @Input()
   description = '';
+  @Input()
+  type = '';
 }

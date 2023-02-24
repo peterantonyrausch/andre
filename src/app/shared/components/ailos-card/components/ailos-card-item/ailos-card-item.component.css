@@ -14,6 +14,10 @@
   margin-left: 20px;
 }
 
+.item-info.action {
+  margin-left: 0;
+}
+
 .item-info label {
   color: #787878;
   font-size: 12px;

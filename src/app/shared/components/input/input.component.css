@@ -1,3 +1,8 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
 input {
   height: 32px;
   padding: 0 8px;
@@ -8,4 +13,18 @@ input {
 
   border-radius: 2px;
   border: 1px solid var(--ailos-gray4);
+}
+
+input:focus, input:focus-visible {
+  outline: none;
+  border: 1px solid var(--ailos-light-blue);
+}
+
+input.invalid {
+  border: 1px solid var(--critic-red);
+}
+
+.error-message {
+  font-size: 12px;
+  color: var(--critic-red);
 }

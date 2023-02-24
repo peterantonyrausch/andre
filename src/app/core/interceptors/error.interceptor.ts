@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, tap, throwError } from 'rxjs';
 import {
   HttpRequest,
   HttpHandler,
@@ -15,6 +15,9 @@ export class ErrorInterceptor implements HttpInterceptor {
     next: HttpHandler,
   ): Observable<HttpEvent<unknown>> {
     return next.handle(request).pipe(
+      tap((response) => {
+        console.log(response);
+      }),
       catchError((error: HttpErrorResponse) => {
         if (error.status === 500) {
           // this.toastrService.error(

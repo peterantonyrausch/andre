@@ -1,9 +1,19 @@
-<ng-container *ngIf="parentFormGroup" [formGroup]="parentFormGroup">
+<div
+  class="input-container"
+  *ngIf="parentFormGroup"
+  [formGroup]="parentFormGroup"
+>
   <input
     [type]="type"
     [mask]="mask"
     [class]="className"
+    [ngClass]="{
+      invalid: isInvalid || error
+    }"
     [placeholder]="placeholder"
     [formControlName]="controlName"
   />
-</ng-container>
+  <span class="error-message" *ngIf="isInvalid || error">{{
+    errorMessage
+  }}</span>
+</div>

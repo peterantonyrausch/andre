@@ -9,12 +9,9 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin-left: 122px;
-}
 
-.ailos-step.selected {
-  background: transparent;
-  border: 2px solid var(--ailos-blue);
+  min-width: 128px;
+  margin-left: 16px;
 }
 
 .ailos-step.selected p {
@@ -27,6 +24,7 @@
 
 .step-info {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -43,12 +41,63 @@
   background: var(--ailos-gray2);
 }
 
-.step-separator {
-  position: absolute;
-  top: 7px;
+.ailos-step.selected .step-button {
+  background: transparent;
+  border: 2px solid var(--ailos-blue);
+}
+
+.step-button:before {
+  content: '';
+  position: relative;
+  top: 1px;
+  left: -128px;
 
   height: 2px;
-  width: 122px;
+  width: 128px;
   display: block;
+  cursor: default;
+
   background: var(--ailos-gray2);
+}
+
+.step-button:after {
+  content: '';
+  position: relative;
+  top: 0;
+  left: 16px;
+
+  height: 2px;
+  width: 64px;
+  display: block;
+  cursor: default;
+
+  background: var(--ailos-gray2);
+}
+
+.ailos-step:nth-of-type(2) .step-button:after {
+  top: -1px;
+}
+
+.ailos-step:first-of-type {
+  justify-content: flex-start;
+}
+
+.ailos-step:last-of-type {
+  justify-content: flex-end;
+}
+
+.ailos-step:first-of-type .step-button:before {
+  display: none;
+}
+
+.ailos-step:first-of-type .step-button:after, .ailos-step:last-of-type .step-button:before {
+  width: 128px;
+}
+
+.ailos-step:last-of-type .step-button:after {
+  display: none;
+}
+
+.ailos-step:last-of-type .step-button:before {
+  left: -128px;
 }

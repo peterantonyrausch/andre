@@ -1,5 +1,7 @@
+export type AccountType = 'APPLICATION' | 'CURRENT';
+
 export type Account = {
-  accountType: string;
+  accountType: AccountType;
   cooperativeName: string;
   accountNumber: string;
 };

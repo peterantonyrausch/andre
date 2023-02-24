@@ -25,15 +25,22 @@ app-ailos-stepper {
 
 .create-cooperative {
   display: flex;
-  align-items: flex-end;
 }
 
 .create-cooperative-cpf {
   width: 270px;
 }
 
-.primary {
-  margin-left: 15px;
+.search-document {
+  margin: 24px 0 0 15px
+}
+
+.new-admission {
+  margin-right: 15px;
+}
+
+:host /deep/ button.small.action {
+  padding-left: 0;
 }
 
 app-footer {

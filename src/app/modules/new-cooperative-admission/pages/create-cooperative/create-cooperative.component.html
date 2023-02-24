@@ -10,53 +10,76 @@
   </div>
   <form
     *ngIf="formGroup"
-    (ngSubmit)="onSubmit()"
+    (ngSubmit)="searchCPF()"
     [formGroup]="formGroup"
     class="create-cooperative"
   >
     <app-ailos-form-group label="CPF">
       <app-input
         type="text"
+        [error]="error"
         controlName="cpf"
         mask="000.000.000-00"
         placeholder="000.000.000-00"
         className="create-cooperative-cpf"
+        errorMessage="informe um CPF válido"
       ></app-input>
     </app-ailos-form-group>
     <app-button
-      type="button"
-      (click)="searchCPF()"
-      class="primary small"
+      type="submit"
       [disabled]="formGroup.invalid"
+      class="primary small search-document"
       >Consultar por CPF</app-button
     >
   </form>
-  <div class="cooperative-information">
+  <div class="cooperative-information" *ngIf="cooperated && loading === false">
     <app-ailos-card
       title="Situação cadastral do CPF"
       subTitle="Consulta na Receita Federal"
     >
       <app-ailos-card-item
-        class="card-content-item"
         label="Nome"
-        description="Mariene de Sousa Oliveira"
+        class="card-content-item"
+        [description]="cooperated.name"
       >
         <span icon class="material-icons gray-4">person</span>
       </app-ailos-card-item>
       <app-ailos-card-item
         class="card-content-item"
         label="Situação do CPF"
-        description="Regular"
+        [description]="cooperated.status | documentStatus"
       >
         <span icon class="material-symbols-outlined ailos-green">
           check_circle
         </span>
       </app-ailos-card-item>
     </app-ailos-card>
+
+    <app-ailos-card
+      [subTitle]="account.cooperativeName"
+      [title]="account.accountType | accountType"
+      *ngFor="let account of cooperated.accounts"
+    >
+      <app-ailos-card-item
+        class="card-content-item"
+        label="Número da conta"
+        [description]="account.accountNumber"
+      >
+        <span icon class="material-symbols-outlined gray-4"> credit_card </span>
+      </app-ailos-card-item>
+      <app-ailos-card-item class="card-content-item" type="ACTION">
+        <app-button action class="tertiary small action"
+          >Duplicar conta</app-button
+        >
+      </app-ailos-card-item>
+    </app-ailos-card>
   </div>
 </div>
 
 <app-footer>
+  <app-button *ngIf="cooperated" class="primary medium new-admission">
+    Iniciar nova admissão
+  </app-button>
   <app-button type="button" class="secondary medium"
     >Dicas para abertura de conta</app-button
   >

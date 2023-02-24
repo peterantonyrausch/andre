@@ -23,7 +23,7 @@ export class MenuComponent implements OnInit {
       { icon: 'search', routerLink: '' },
       { icon: 'grade', routerLink: '' },
       { icon: 'sms', routerLink: '' },
-      { icon: 'sms', routerLink: '' },
+      { icon: 'list_alt', routerLink: '' },
       { icon: 'account_balance', routerLink: '' },
     ];
   }

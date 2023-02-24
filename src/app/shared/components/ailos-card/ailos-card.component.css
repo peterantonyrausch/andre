@@ -1,5 +1,14 @@
+:host {
+  margin: 0 10px;
+}
+
+:host:first-of-type {
+  margin-left: 0;
+}
+
 .ailos-card-wrapper {
   width: 270px;
+  height: 200px;
   padding: 20px;
   background: white;
   border-radius: 2px;

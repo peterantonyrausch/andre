@@ -10,7 +10,7 @@
 }
 
 .router-wrapper {
-  height: calc(100% - 89px);
+  height: calc(100vh - 89px);
 }
 
 :host /deep/ .router-wrapper > *:not(router-outlet) {
