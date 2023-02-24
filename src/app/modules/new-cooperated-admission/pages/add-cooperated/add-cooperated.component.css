@@ -39,7 +39,7 @@ app-ailos-stepper {
   margin-right: 15px;
 }
 
-:host /deep/ button.small.action {
+:host ::ng-deep button.small.action {
   padding-left: 0;
 }
 

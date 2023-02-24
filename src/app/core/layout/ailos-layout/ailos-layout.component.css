@@ -13,7 +13,7 @@
   height: calc(100vh - 89px);
 }
 
-:host /deep/ .router-wrapper > *:not(router-outlet) {
+:host ::ng-deep .router-wrapper > *:not(router-outlet) {
   height: 100%;
   display: flex;
   flex-direction: column;
